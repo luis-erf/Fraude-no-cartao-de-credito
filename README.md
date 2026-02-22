@@ -100,7 +100,7 @@ print(df.head())
 ```python
 import joblib
 
-model = joblib.load("modelo_fraude_best.pkl")
+model = joblib.load("modelo_final.pkl")
 ```
 5.4) Pré-processamento (exemplo genérico)
 Ajuste esta etapa conforme as transformações aplicadas no pipeline de treino (mesmas colunas, mesma ordem e mesmas operações).
@@ -111,7 +111,7 @@ df.drop_duplicates(inplace=True)
 X = df.drop(columns=['id])
 
 #Realize a previsão
-y_proba = model.predict_proba(X)
+y_proba = model['model'].predict_proba(X)
 print("Probabilidades (primeiras linhas):")
 print(y_proba[:5])
 ```
